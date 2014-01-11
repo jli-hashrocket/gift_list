@@ -9,6 +9,9 @@ gem 'pg'
 # Use Simple Form
 gem 'simple_form'
 
+# Use Foundation Rails
+gem 'foundation-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -42,6 +45,7 @@ group :test, :development do
   gem 'valid_attribute'
   gem 'shoulda'
   gem 'capybara'
+  gem 'launchy'
 end
 
 

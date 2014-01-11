@@ -17,8 +17,8 @@ feature 'User creates wish list entry', %q{
     fill_in 'First Name', with: "Jason"
     fill_in 'Last Name', with: "Li"
     fill_in 'Relation', with: "Brother"
+    click_on 'Create List'
 
-    click_on 'Create Gift List'
-    expect(page).to have_content("Entry has been successfully created.")
+    expect(page).to have_content("A new gift list has successfully been created")
   end
 end
