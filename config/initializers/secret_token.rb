@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GiftList::Application.config.secret_key_base = '1214d86422961472f18c56884ea3f7edae73feec472f13b64c614abddf76acb3a8e9976a14d678bae65e8421b6f44cbe10af5d0d234b94a3ff557c012c2a71e7'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+GiftList::Application.config.secret_key_base = secure_token
