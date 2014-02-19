@@ -1,2 +1,16 @@
 <h1>Gift Lists</h1>
 <%= link_to 'New Gift List', new_list_path %>
+
+<table cellpadding="5" cellspacing="0" border="0">
+  <tr>
+    <td>Last Name</td><td>First Name</td><td>Relation</td>
+  </tr>
+  <% @lists.each do |list| %>
+    <tr>
+      <td><%= list.last_name %></td>
+      <td><%= list.first_name %></td>
+      <td><%= list.relation %></td>
+    </tr>
+    <% end%>
+</table>
+
