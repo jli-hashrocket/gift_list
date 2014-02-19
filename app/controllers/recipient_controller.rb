@@ -1,21 +1,21 @@
-class ListsController < ApplicationController
+class RecipientsController < ApplicationController
   def index
-    @lists = List.all
+    @recipients = Recipient.all
   end
 
   def new
-    @list = List.new
+    @list = Recipient.new
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = Recipient.find(params[:id])
   end
 
 
   def create
-    @list = List.new(list_params)
+    @list = Recipient.new(list_params)
     if @list.save
-      redirect_to lists_path, notice: 'A new gift list has successfully been created.'
+      redirect_to recipients_path, notice: 'A new recipient has successfully been created.'
     else
       render :new
     end
@@ -24,6 +24,6 @@ class ListsController < ApplicationController
 
   private
     def list_params
-      params.require(:list).permit(:first_name, :last_name, :relation)
+      params.require(:list).permit(:first_name, :last_name, :relationship_id)
     end
 end

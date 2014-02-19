@@ -1,0 +1,16 @@
+<h1>Gift Recipients</h1>
+<%= link_to 'New Gift Recipient', new_recipient_path %>
+
+<table cellpadding="5" cellspacing="0" border="0">
+  <tr>
+    <td>Last Name</td><td>First Name</td><td>Relationship</td>
+  </tr>
+  <% @recipients.each do |recipient| %>
+    <tr>
+      <td><%= recipient.last_name %></td>
+      <td><%= recipient.first_name %></td>
+      <td><%= recipient.relation %></td>
+    </tr>
+    <% end%>
+</table>
+
