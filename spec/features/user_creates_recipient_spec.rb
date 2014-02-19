@@ -12,6 +12,7 @@ feature 'User creates gift list recipient', %q{
   # * I must save the recipient
 
   scenario 'creates gift list entry' do
+    relationship = FactoryGirl.create(:relationship)
     visit root_path
     click_on 'New Gift Recipient'
 

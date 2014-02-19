@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :relationship do
-    name "MyString"
+    name "Family"
   end
 end

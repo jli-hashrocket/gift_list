@@ -3,6 +3,6 @@
 <%= simple_form_for(@recipient) do |f| %>
   <%= f.input :first_name, label: 'First Name' %>
   <%= f.input :last_name, label: 'Last Name' %>
-  <%= f.association :relationships, collection: ["Family", "Friend", "Coworker", "Acquaintance"]  %>
+  <%= f.association :relationship, collection: Relationship.all(order: 'id')  %>
   <%= f.button :submit %>
 <% end %>
