@@ -4,17 +4,17 @@ class RecipientsController < ApplicationController
   end
 
   def new
-    @list = Recipient.new
+    @recipient = Recipient.new
   end
 
   def show
-    @list = Recipient.find(params[:id])
+    @recipient = Recipient.find(params[:id])
   end
 
 
   def create
-    @list = Recipient.new(list_params)
-    if @list.save
+    @recipient = Recipient.new(recipient_params)
+    if @recipient.save
       redirect_to recipients_path, notice: 'A new recipient has successfully been created.'
     else
       render :new
@@ -23,7 +23,7 @@ class RecipientsController < ApplicationController
 
 
   private
-    def list_params
-      params.require(:list).permit(:first_name, :last_name, :relationship_id)
+    def recipient_params
+      params.require(:recipient).permit(:first_name, :last_name, :relationship_id)
     end
 end

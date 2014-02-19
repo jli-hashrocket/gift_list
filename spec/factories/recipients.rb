@@ -1,9 +1,9 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :list do
-    first_name "MyString"
-    last_name "MyString"
-    relation "MyString"
+  factory :recipient do
+    first_name "Jason"
+    last_name "Li"
+    relationship_id 1
   end
 end
