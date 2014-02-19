@@ -4,5 +4,5 @@ class Recipient < ActiveRecord::Base
   validates_presence_of :relationship
 
   belongs_to :relationship,
-    inverse_of: :recipient
+    inverse_of: :recipients
 end

@@ -19,8 +19,8 @@ feature 'User creates gift list recipient', %q{
     fill_in 'First Name', with: "Jason"
     fill_in 'Last Name', with: "Li"
     select 'Family', from: "Relationship"
-    click_on 'Create Gift Recipient'
+    click_on 'Create Recipient'
 
-    expect(page).to have_content("A new gift recipient has successfully been created")
+    expect(page).to have_content("A new recipient has successfully been created.")
   end
 end
