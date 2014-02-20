@@ -1,14 +1,16 @@
 class RecipientsController < ApplicationController
+  respond_to :json
+
   def index
-    @recipients = Recipient.all
+    respond_with Recipient.all
   end
 
   def new
-    @recipient = Recipient.new
+    respond_with Recipient.new
   end
 
   def show
-    @recipient = Recipient.find(params[:id])
+    respond_with Recipient.find(params[:id])
   end
 
 
