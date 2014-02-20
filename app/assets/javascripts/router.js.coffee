@@ -1,4 +1,4 @@
-GiftList.Router.map ->
-  @resource 'recipients', ->
-    @resource 'recipient', path: 'recipient_id'
+GiftList.Router.map ()->
+  @resource 'recipients', {path: 'recipients'}, ->
+    @resource 'recipient', {path: ':id'}
 
