@@ -1,5 +1,3 @@
 GiftList.RecipientsRoute = Ember.Route.extend
   model: ->
-    GiftList.Recipient.findAll
-
-
+    @store.all(GiftList.Recipient)
