@@ -1,12 +1,16 @@
 GiftList::Application.routes.draw do
-
+  namespace :api do
+    namespace :v1 do
+      resources :recipients
+    end
+  end
   # resources :recipients
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get 'application/index'
-  root to: 'application#index'
+
+  root 'application#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
