@@ -1,7 +1,9 @@
 GiftList::Application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :recipients
+      resources :relationships do
+        resources :recipients
+      end
     end
   end
   # resources :recipients

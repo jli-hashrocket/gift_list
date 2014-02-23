@@ -1,4 +1,4 @@
 GiftList.Router.map ->
-  @resource 'recipients', {path: '/'}, ->
+  @resource 'relationships', { path: '/' }, ->
     @resource 'recipient', {path: ':recipient_id'}
 
