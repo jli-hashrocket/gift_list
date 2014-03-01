@@ -1,6 +1,6 @@
 <h2>Relationships</h2>
   <ul id="relationships">
     {{#each}}
-      <li>{{name}}({{recipients.length}})</li>
+      <li>{{#link-to "recipients"}}{{name}}({{recipients.length}}){{/link-to}}</li>
     {{/each}}
   </ul>

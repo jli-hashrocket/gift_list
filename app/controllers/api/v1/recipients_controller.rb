@@ -2,7 +2,7 @@ class Api::V1::RecipientsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Recipient.all
+    respond_with Recipient.where(id: params[:ids].all)
   end
 
   # def new
@@ -26,6 +26,6 @@ class Api::V1::RecipientsController < ApplicationController
 
   private
     def recipient_params
-      params.require(:recipient).permit(:first_name, :last_name, :relationship_id)
+      params.require(:recipient).permit(:first_name, :last_name)
     end
 end
