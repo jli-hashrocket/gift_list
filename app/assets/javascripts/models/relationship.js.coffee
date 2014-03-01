@@ -1,3 +1,3 @@
 GiftList.Relationship = DS.Model.extend
   name: DS.attr('string')
-  recipients: DS.hasMany('recipient')
+  recipients: DS.hasMany('recipient', { async: true })
