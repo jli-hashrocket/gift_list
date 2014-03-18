@@ -1,6 +1,12 @@
+<div class="relationships">
 <h2>Relationships</h2>
   <ul id="relationships">
-    {{#each}}
-      <li>{{#link-to "recipients"}}{{name}}({{recipients.length}}){{/link-to}}</li>
+    {{#each relationship in controller}}
+      <li>{{#link-to "relationship" relationship}}{{relationship.name}}({{relationship.recipients.length}}){{/link-to}}</li>
     {{/each}}
   </ul>
+</div>
+
+<div class="relationship">
+  {{outlet}}
+</div>
