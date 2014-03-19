@@ -2,7 +2,7 @@ class Api::V1::RecipientsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Recipient.where(id: params[:ids].all)
+    respond_with Recipient.all
   end
 
   # def new
