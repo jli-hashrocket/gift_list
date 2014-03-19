@@ -1,8 +1,8 @@
-<div class="recipients">
-<h2>Recipients</h2>
-  <ul id="recipients">
-    {{#each recipient in controller}}
-      <li>{{#link-to "recipient" recipient}}{{recipient.last_name}} {{recipient.first_name}} {{/link-to}}</li>
+<div class="relationships">
+<h2>Relationships</h2>
+  <ul id="relationships">
+    {{#each relationship in controller}}
+      <li>{{#link-to "relationship" relationship}}{{relationship.name}}({{relationship.recipients.length}}){{/link-to}}</li>
     {{/each}}
   </ul>
 </div>
