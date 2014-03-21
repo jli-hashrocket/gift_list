@@ -1,3 +1,3 @@
-GiftList.RelationshipController = Ember.ArrayController.extend({
 
+GiftList.RelationshipController = Ember.ObjectController.extend({
 });

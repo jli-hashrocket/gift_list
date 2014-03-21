@@ -1,2 +1,4 @@
-GiftList.RecipientsController = Ember.ArrayController.extend();
+GiftList.RecipientsController = Ember.ArrayController.extend({
+
+});
 
