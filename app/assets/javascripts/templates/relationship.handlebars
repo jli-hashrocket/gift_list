@@ -1,8 +1,6 @@
-<div class="relationships">
-<h2>Relationships</h2>
-  <ul id="relationships">
-    {{#each relationship in controller}}
-      <li>{{#link-to "relationship" relationship}}{{relationship.name}}({{relationship.recipients.length}}){{/link-to}}</li>
-    {{/each}}
-  </ul>
-</div>
+<h2>{{name}}</h2>
+<ul>
+{{#each recipient in recipients}}
+<li>{{recipient.last_name}}, {{recipient.first_name}}</li>
+{{/each}}
+</ul>

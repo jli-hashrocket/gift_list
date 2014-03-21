@@ -1,6 +1,5 @@
-<h2>Recipients</h2>
   <ul id="recipients">
-    {{#each}}
-      <li>{{last_name}}, {{first_name}}</li>
+    {{#each recipient in controller}}
+      <li>{{recipient.last_name}}, {{recipient.first_name}}</li>
     {{/each}}
   </ul>
