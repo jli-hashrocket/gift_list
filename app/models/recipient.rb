@@ -5,4 +5,6 @@ class Recipient < ActiveRecord::Base
 
   belongs_to :relationship,
     inverse_of: :recipients
+  has_many :gifts,
+    inverse_of: :recipient
 end
