@@ -5,14 +5,13 @@ class Api::V1::RecipientsController < ApplicationController
     respond_with Recipient.all
   end
 
+  def show
+    respond_with Recipient.find(params[:id])
+  end
+
   # def new
   #   respond_with Recipient.new
   # end
-
-  # def show
-  #   respond_with Recipient.find(params[:id])
-  # end
-
 
   # def create
   #   @recipient = Recipient.new(recipient_params)

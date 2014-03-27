@@ -1,6 +1,10 @@
-<h2>{{name}}</h2>
-<ul>
-{{#each recipient in recipients}}
-<li>{{recipient.last_name}}, {{recipient.first_name}}</li>
-{{/each}}
-</ul>
+<div class="relationship">
+  <h2>{{name}}</h2>
+  <ul>
+    {{#each recipient in recipients}}
+    <li>{{#link-to "recipient" recipient}}{{recipient.last_name}}, {{recipient.first_name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+{{outlet}}
