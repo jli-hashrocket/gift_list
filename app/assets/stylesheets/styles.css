@@ -1,4 +1,5 @@
-.relationships, .relationship{
+.relationships, .relationship, .recipients, .recipient{
   float: left;
   margin-right: 40px;
+  display:block;
 }
