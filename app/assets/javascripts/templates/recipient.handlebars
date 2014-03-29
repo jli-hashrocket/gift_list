@@ -1,0 +1,13 @@
+<div class="recipient">
+  <h2>{{first_name}}'s Gifts</h2>
+  <ul class="gifts">
+    <table>
+      <thead>
+        <tr><td>Name</td></tr>
+      </thead>
+      {{#each gift in gifts}}
+        <tr><td>{{gift.name}}<td></tr>
+      {{/each}}
+    </table>
+  </ul>
+</div>
