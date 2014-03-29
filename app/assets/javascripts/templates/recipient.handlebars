@@ -1,13 +1,22 @@
 <div class="recipient">
   <h2>{{first_name}}'s Gifts</h2>
-  <ul class="gifts">
-    <table>
-      <thead>
-        <tr><td>Name</td></tr>
-      </thead>
-      {{#each gift in gifts}}
-        <tr><td>{{gift.name}}<td></tr>
-      {{/each}}
-    </table>
-  </ul>
+  <table id="gifts" cellpadding=5 cellspacing=0>
+    <tr>
+      <th>Name</th>
+      <th>Store</th>
+      <th>Website</th>
+      <th>Quantity</th>
+      <th>Cost</th>
+    </tr>
+    {{#each gift in gifts}}
+    <tr>
+      <td>{{gift.name}}</td>
+      <td>{{gift.location}}</td>
+      <td>{{gift.url}}</td>
+      <td>{{gift.qty}}</td>
+      <td>{{gift.cost}}</td>
+    </tr>
+
+    {{/each}}
+  </table>
 </div>
