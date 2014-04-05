@@ -1,6 +1,6 @@
 <div class="relationship">
   <h2>{{name}}</h2>
-  {{action "addRecipient"}}Add New Recipient{{/link-to}}
+  <button {{action "createRelationship"}}>Add New Recipient</button>
   <ul>
     {{#each recipient in recipients}}
     <li>{{#link-to "recipient" recipient}}{{recipient.last_name}}, {{recipient.first_name}}{{/link-to}}</li>
@@ -9,3 +9,4 @@
 </div>
 
 {{outlet}}
+
