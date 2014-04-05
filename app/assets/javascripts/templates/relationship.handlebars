@@ -1,5 +1,6 @@
 <div class="relationship">
   <h2>{{name}}</h2>
+  {{#link-to 'relationship.new' relationship}}Add New Recipient{{/link-to}}
   <ul>
     {{#each recipient in recipients}}
     <li>{{#link-to "recipient" recipient}}{{recipient.last_name}}, {{recipient.first_name}}{{/link-to}}</li>
