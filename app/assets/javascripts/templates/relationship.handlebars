@@ -1,9 +1,9 @@
 <div class="relationship">
   <h2>{{name}}</h2>
-  <button {{action "createRelationship"}}>Add New Recipient</button>
+  <button {{action "addRecipient"}}>Add Recipient</button>
   <ul>
     {{#each recipient in recipients}}
-    <li>{{#link-to "recipient" recipient}}{{recipient.last_name}}, {{recipient.first_name}}{{/link-to}}</li>
+    <li>{{#link-to "recipient" recipient}}{{recipient.last_name}}, {{recipient.first_name}}{{/link-to}}  <button {{action "editRecipient"}}>Edit</button></li>
     {{/each}}
   </ul>
 </div>

@@ -1,5 +1,6 @@
 <div class="relationships">
-<h2>Relationships</h2>
+<h2>Relationships({{relationshipsCount}})</h2>
+  <button {{action "addRelationship"}}>Add Relationship</button>
   <ul id="relationships">
     {{#each relationship in controller}}
       <li>{{#link-to "relationship" relationship}}{{relationship.name}}({{relationship.recipients.length}}){{/link-to}}</li>
@@ -7,6 +8,6 @@
   </ul>
 </div>
 
-{{outlet}}
+{{outlet 'add'}}
 
 
