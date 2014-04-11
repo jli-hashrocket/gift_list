@@ -9,18 +9,18 @@ class Api::V1::RecipientsController < ApplicationController
     respond_with Recipient.find(params[:id])
   end
 
-  # def new
-  #   respond_with Recipient.new
-  # end
+  def new
+    respond_with Recipient.new
+  end
 
-  # def create
-  #   @recipient = Recipient.new(recipient_params)
-  #   if @recipient.save
-  #     redirect_to recipients_path, notice: 'A new recipient has successfully been created.'
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @recipient = Recipient.new(recipient_params)
+    if @recipient.save
+      redirect_to recipients_path, notice: 'A new recipient has successfully been created.'
+    else
+      render :new
+    end
+  end
 
 
   private

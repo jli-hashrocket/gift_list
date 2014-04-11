@@ -9,6 +9,14 @@ class Api::V1::RelationshipsController < ApplicationController
     respond_with Relationship.find(params[:id])
   end
 
+  def new
+    respond_with Relationship.new
+  end
+
+  def create
+    respond_with Relationship.create(relationship_params)
+  end
+
   private
     def relationship_params
       params.require(:relationship).permit(:name)
